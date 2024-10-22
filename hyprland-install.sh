@@ -29,13 +29,13 @@ FOLDER_CREATE(){
   mkdir $HOME/Scripts
   mkdir -p $HOME/.config/waybar/scripts
   mkdir -p $HOME/Franks/Estudos
-  mkdir -p $HOME/Franks/Projetos/Repo
+  mkdir -p $HOME/Franks/Projetos/Repository
 }
 
 # ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-hack-nerd ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -82,18 +82,13 @@ FILES_COPY(){
   clear && echo -e "[!] Copiando arquivos..." && sleep 2
   cp $HOME/.frannksz-dotfiles/dotfiles/bin/* $HOME/.local/bin && cd $HOME/.local/bin && chmod +x *
   cp $HOME/.frannksz-dotfiles/dotfiles/scripts/* $HOME/Scripts && cd $HOME/Scripts && chmod +x *
-  cp $HOME/.frannksz-dotfiles/dotfiles/.fonts/* $HOME/.fonts
-  cp $HOME/.frannksz-dotfiles/dotfiles/.zshrc $HOME
-  cp $HOME/.frannksz-dotfiles/dotfiles/.zshenv $HOME
+  cp $HOME/.frannksz-dotfiles/dotfiles/home/.zshrc $HOME
+  cp $HOME/.frannksz-dotfiles/dotfiles/home/.zshenv $HOME
   cp $HOME/.frannksz-dotfiles/dotfiles/home/.zprofile $HOME
   cp $HOME/.frannksz-dotfiles/dotfiles/home/.aliases $HOME
   cp $HOME/.frannksz-dotfiles/dotfiles/home/.scripts $HOME
-  cp $HOME/.frannksz-dotfiles/dotfiles/home/.emojis $HOME
+  cp $HOME/.frannksz-dotfiles/dotfiles/home/.xcompose $HOME
   touch .zhistory $HOME
-  sudo cp $HOME/.frannksz-dotfiles/dotfiles/.fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.frannksz-dotfiles/dotfiles/.fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.frannksz-dotfiles/dotfiles/.fonts/Poppins.otf /usr/share/fonts
-  sudo cp $HOME/.frannksz-dotfiles/dotfiles/.fonts/MesloLGS NF Regular.ttf /usr/share/fonts/TTF
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/hypr/hyprland.conf $HOME/.config/hypr
@@ -108,7 +103,6 @@ FILES_COPY(){
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/wofi/* $HOME/.config/wofi
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
-  cp $HOME/.frannksz-dotfiles/dotfiles/home/.xcompose $HOME
   xdg-mime default org.pwmt.zathura.desktop application/pdf
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/nvim/lua-plugins $HOME/.config/nvim
@@ -116,8 +110,8 @@ FILES_COPY(){
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/018.png"
-   wal -i $HOME/Wallpapers/018.png
+   wget -c "https://raw.githubusercontent.com/frannksz/wallpack/main/000.png"
+   wal -i $HOME/Wallpapers/000.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
