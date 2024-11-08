@@ -22,4 +22,5 @@ sudo pacman -S hyprland \
   hyprpaper \
   slurp \
   usbutils \
+  hyprlock \
   wl-clipboard --noconfirm

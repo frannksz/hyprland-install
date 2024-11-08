@@ -14,16 +14,18 @@ FOLDER_CREATE(){
   mkdir $HOME/.config/hypr
   mkdir $HOME/.config/hypr/scripts
   mkdir $HOME/.config/waybar
-  mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
   mkdir $HOME/.config/wofi
   mkdir $HOME/.config/nvim
   mkdir $HOME/.config/kitty
+  mkdir $HOME/.config/background
   mkdir $HOME/.fonts
   mkdir $HOME/.themes
   mkdir $HOME/.icons
+  mkdir $HOME/.face
   mkdir $HOME/.local/bin
   mkdir $HOME/Wallpapers
+  mkdir $HOME/Downloads/qute_down
   mkdir $HOME/.projects
   mkdir $HOME/Franks
   mkdir $HOME/Scripts
@@ -35,7 +37,7 @@ FOLDER_CREATE(){
 # ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-jetbrains-mono-nerd ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup qutebrowser git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-jetbrains-mono-nerd ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -54,11 +56,6 @@ AUR_BUILD(){
   cd $HOME/.compile
   git clone https://aur.archlinux.org/grimblast-git.git
   cd grimblast-git
-  makepkg -sic --noconfirm
-
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/swaylock-effects.git
-  cd swaylock-effects
   makepkg -sic --noconfirm
 
   clear
@@ -97,9 +94,8 @@ FILES_COPY(){
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/config.jsonc $HOME/.config/waybar
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/scripts/* $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/*
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/style.css $HOME/.config/waybar
-  #cp $HOME/.frannksz-dotfiles/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser
+  cp $HOME/.frannksz-dotfiles/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/wlogout/style.css $HOME/.config/wlogout
-  cp $HOME/.frannksz-dotfiles/dotfiles/.config/swaylock/config $HOME/.config/swaylock
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/wofi/* $HOME/.config/wofi
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
