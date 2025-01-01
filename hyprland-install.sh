@@ -25,7 +25,7 @@ FOLDER_CREATE(){
   mkdir $HOME/.face
   mkdir $HOME/.local/bin
   mkdir $HOME/Wallpapers
-  mkdir $HOME/Downloads/qute_down
+  #mkdir $HOME/Downloads/qute_down
   mkdir $HOME/.projects
   mkdir $HOME/Franks
   mkdir $HOME/Scripts
@@ -37,7 +37,7 @@ FOLDER_CREATE(){
 # ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup qutebrowser git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-jetbrains-mono-nerd ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu slurp htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-jetbrains-mono-nerd ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv ripgrep fd --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -94,7 +94,7 @@ FILES_COPY(){
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/config.jsonc $HOME/.config/waybar
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/scripts/* $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/*
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/waybar/style.css $HOME/.config/waybar
-  cp $HOME/.frannksz-dotfiles/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser
+  #cp $HOME/.frannksz-dotfiles/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/wofi/* $HOME/.config/wofi
   cp $HOME/.frannksz-dotfiles/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
@@ -106,8 +106,8 @@ FILES_COPY(){
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannksz/wallpack/main/013.png"
-   wal -i $HOME/Wallpapers/013.png
+   wget -c "https://raw.githubusercontent.com/frannksz/wallpack/main/014.png"
+   wal -i $HOME/Wallpapers/014.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }

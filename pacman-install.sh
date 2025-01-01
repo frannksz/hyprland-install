@@ -10,6 +10,9 @@ sudo pacman -S hyprland \
   xf86-video-amdgpu \
   ttf-dejavu \
   kitty \
+  swappy \
+  hyprpicker \
+  xorg-xrandr \
   waybar \
   pavucontrol \
   pipewire \
